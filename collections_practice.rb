@@ -35,11 +35,12 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.map do |word|
-    if word == "feet"
-      "feet"
+  new_array = array.each_with_index do |word, index|
+    if index == 1
+      word
     else
       word << "s"
     end
   end
+  new_array
 end
